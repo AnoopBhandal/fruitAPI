@@ -11,7 +11,7 @@
 
 
 // server.listen(3000, () =>{console.log("Server Ready")})
-require('dotenv'.)config();
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const fruits = require("./fruits.json")
