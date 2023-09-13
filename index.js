@@ -11,11 +11,11 @@
 
 
 // server.listen(3000, () =>{console.log("Server Ready")})
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const fruits = require("./fruits.json")
 const port = process.env.PORT
-require('dotenv').config()
 const cors = require('cors')
 
 // app.get('/', (request, response) =>{
