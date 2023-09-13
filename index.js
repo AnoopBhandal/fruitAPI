@@ -11,11 +11,12 @@
 
 
 // server.listen(3000, () =>{console.log("Server Ready")})
-require('dotenv'.)config();
 const express = require("express");
 const app = express();
 const fruits = require("./fruits.json")
 const port = process.env.PORT
+require('dotenv').config()
+const cors = require('cors')
 
 // app.get('/', (request, response) =>{
 //     response.send("Hello World")
@@ -49,7 +50,7 @@ const port = process.env.PORT
 //     next();
 // })
 
-
+app.use(cors())
 app.use(express.json());
 
 app.get("/", (req, res)=>{
